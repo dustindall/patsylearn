@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-import patsylearn
-
 from os.path import exists
 from setuptools import setup
 
@@ -8,7 +6,7 @@ with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
 setup(name='patsylearn',
-      version=patsylearn.__version__,
+      version="0.0.1",
       description='Scikit-lean Patsy adaptor',
       url='http://github.com/amueller/patsylearn/',
       maintainer='Andreas Mueller',
