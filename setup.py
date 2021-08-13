@@ -4,6 +4,9 @@ import patsylearn
 from os.path import exists
 from setuptools import setup
 
+with open('requirements.txt') as f:
+    requirements = f.read().splitlines()
+
 setup(name='patsylearn',
       version=patsylearn.__version__,
       description='Scikit-lean Patsy adaptor',
@@ -13,5 +16,6 @@ setup(name='patsylearn',
       license='BSD',
       keywords='scikit-learn patsy formula machine-learning',
       packages=['patsylearn'],
-      long_description=(open('README.md').read() if exists('README.rst') else
-                        ''))
+      long_description=(open('README.md').read() if exists('README.rst') else''),
+      requirements=requirements,
+)
